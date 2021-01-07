@@ -1,6 +1,6 @@
 ## The working directory
 
-/rds/project/jmmh2/rds-jmmh2-projects/olink_proteomics/scallop/NGS 
+~/rds/projects/olink_proteomics/scallop/Olink-NGS
 
 ### Protein information
 
