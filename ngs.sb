@@ -13,7 +13,7 @@
 
 export TMPDIR=/rds/user/$USER/hpc-work/
 export scallop=/rds/project/jmmh2/rds-jmmh2-projects/olink_proteomics/scallop
-export src=${scallop}/NGS/work
+export src=${scallop}/Olink-NGS/work
 module load plink/2.00-alpha
 
 export uniprot=$(head -1 olink_ngs_proteomics/gwasqc/olink_ngs_gwasqc.txt | awk '{$1=""};1' | awk '{$1=$1};1')
