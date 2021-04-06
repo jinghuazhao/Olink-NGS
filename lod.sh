@@ -159,10 +159,14 @@ R --no-save -q <<\ \ END
 
   pdf("INF.interval.LLOD.post.QC.vs.pQTL.pdf", height=5, width=7)
   par(mar=c(5,4,1,1))
-  plot(annot$pc.belowLOD.new, col=annot$pQTL, las=1, ylab = "% samples with very low abundance per protein", xaxt= 'n', xlab = "ordered proteins", cex=0.8, pch=19)
+  plot(annot$pc.belowLOD.new, col=annot$pQTL, las=1, 
+       ylab = "% samples with very low abundance per protein", xaxt= 'n', xlab = "ordered proteins", cex=0.8, pch=19)
   axis(side=1, at = seq(from=0, to=nrow(annot), by=20))
   legend("topright", legend= c("no pQTL", "pQTL"), col= c("red","blue"), pch = 19)
   dev.off()
+  save(annot, file="lod.rda")
+  options(width=120)
+  annot
   END
 }
 
